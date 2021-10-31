@@ -474,7 +474,7 @@ public class SalesforceDroidGapActivity extends CordovaActivity implements Sales
         assert bootconfig.isLocal();
         String startPage = bootconfig.getStartPage();
         SalesforceHybridLogger.i(TAG, "loadLocalStartPage called - loading!");
-        loadUrl("file:///android_asset/www/" + startPage);
+        loadUrl("https://localhost/" + startPage);
         webAppLoaded = true;
     }
 
@@ -541,7 +541,7 @@ public class SalesforceDroidGapActivity extends CordovaActivity implements Sales
     public void loadErrorPage() {
         String errorPage = bootconfig.getErrorPage();
         SalesforceHybridLogger.i(TAG, "getErrorPageUrl called - local error page: " + errorPage);
-        loadUrl("file:///android_asset/www/" + errorPage);
+        loadUrl("https://localhost/" + errorPage);
     }
 
     /**
