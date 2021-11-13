@@ -474,7 +474,7 @@ public class SalesforceDroidGapActivity extends CordovaActivity implements Sales
         assert bootconfig.isLocal();
         String startPage = bootconfig.getStartPage();
         SalesforceHybridLogger.i(TAG, "loadLocalStartPage called - loading!");
-        loadUrl("https://localhost/" + startPage);
+        loadUrl(launchUrl);
         webAppLoaded = true;
     }
 
